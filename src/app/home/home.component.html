@@ -1,0 +1,10 @@
+<a *ngIf="isloggedIn" (click)="logout()">LOGOUT</a>
+<div>
+  <ul>
+    <li *ngFor="let video of videoList" style="list-style-type: none"><br>
+      <a href="/viewVideo/{{video.id.videoId}}">
+       <app-single-video [title]="video.snippet.title" [thumbnailUrl]="video.snippet.thumbnails.medium.url"></app-single-video>
+      </a>
+    </li>
+  </ul>
+</div>
